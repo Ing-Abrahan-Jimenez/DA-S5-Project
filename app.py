@@ -1,8 +1,12 @@
+import os
 import streamlit as st
 import pandas as pd
 import plotly_express as px
-data_vehicles = pd.read_csv(
-    r"D:\Cursos\Data analyst Triple ten\Proyectos triple ten\Sprint 5\DA-S5-Project\vehicles_us.csv")
+
+current_route = os.path.dirname(__file__)
+file_path = os.path.join(current_route, '..', 'vehicles_us.csv')
+
+data_vehicles = pd.read_csv(file_path)
 
 st.title('Enterprise cars stock')
 st.header('Vehicels in stock analyse')
