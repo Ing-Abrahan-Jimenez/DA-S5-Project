@@ -4,7 +4,7 @@ import pandas as pd
 import plotly_express as px
 
 current_route = os.path.dirname(__file__)
-file_path = os.path.join(current_route, '..', 'vehicles_us.csv')
+file_path = os.path.join(current_route, 'vehicles_us.csv')
 
 data_vehicles = pd.read_csv(file_path)
 
